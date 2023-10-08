@@ -7,26 +7,25 @@
  *
  * Return: Always 0 (success)
 */
-
 int main(void)
 {
-	char ch = 'a';
-	char ch = 'A';
+	char ch_lowercase = 'a';
+	char ch_uppercase = 'A';
 
-	/*prints a - z*/
-	while (ch <= 'z')
+	/* Print lowercase alphabets (a - z) */
+	while (ch_lowercase <= 'z')
 	{
-		putchar(ch);
-		ch++;
+	putchar(ch_lowercase);
+	ch_lowercase++;
 	}
 
-	/*print A - Z*/
-	while (CH <= 'Z')
+	/* Print uppercase alphabets (A - Z)*/
+	while (ch_uppercase <= 'Z')
 	{
-		putchar(CH);
-		ch++;
+	putchar(ch_uppercase);
+	ch_uppercase++;
 	}
+
 	putchar('\n');
-
 	return (0);
 }
