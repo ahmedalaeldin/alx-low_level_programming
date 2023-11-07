@@ -1,25 +1,20 @@
-#ifndef DOG_H
-#define DOG_H
+#include "dog.h"
+#include "stdlib.h"
 
 /**
- * struct dog - a dog struct
- * @name: dog's name
- * @age: dog's age
- * @owner: owner's name
+ * free_dog - free your dawgs
+ * @d: yo dawg
  *
- * Description: just a long dog struct in a big kitty world
+ * Return: void.
  */
-struct dog
+void free_dog(dog_t *d)
 {
-	char *name;
-	float age;
-	char *owner;
-};
-
-typedef struct dog dog_t;
-
-void init_dog(struct dog *d, char *name, float age, char *owner);
-void print_dog(struct dog *d);
-dog_t *new_dog(char *name, float age, char *owner);
-void free_dog(dog_t *d);
-#endif
+	if(d)
+	{
+		if (d->name)
+			free(d->name);
+		if (d->owner)
+			free(d->owner);
+		free(d);
+	}
+}
