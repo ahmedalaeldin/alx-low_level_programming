@@ -26,12 +26,12 @@ int _strlen(const char *str)
  * Return: @dest
  */
 
-char *_strccopy(char *dest, char *src)
+char *_strcopy(char *dest, char *src)
 {
 	int i;
 
 	for (i = 0; src[i]; i++)
-		dest[i] = src [i];
+		dest[i] = src[i];
 	dest[i] = '\0';
 
 	return (dest);
@@ -55,10 +55,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	/* if name and owner are empty and age is less than zero return null*/
 	if (!name || age < 0 || !owner)
 		return (NULL);
+
 	dog = (dog_t *) malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	dog-> name = malloc(sizeof (char) * (_strlen(name) + 1));
+
+	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if ((*dog).name == NULL)
 	{
 		free(dog);
