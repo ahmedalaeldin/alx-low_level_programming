@@ -17,6 +17,7 @@ int _strlen(const char *str)
 		length++;
 	return (length);
 }
+
 /**
  * _strcpy - a funcation that retuns @dest with copy of string from @src
  *
