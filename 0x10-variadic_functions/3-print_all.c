@@ -39,10 +39,10 @@ void format_string(char *separator, va_list ap)
 {
 	char *str = va_arg(ap, char *);
 
-	switch ((int)(!str))
+	switch ((int)(!str)) {
 		case 1:
 			str = "(nil)";
-
+	}
 	printf("%s%s", separator, str);
 }
 
@@ -58,12 +58,12 @@ void print_all(const char * const format, ...)
 	token_t tokens[] = {
 		{"c", format_char},
 		{"i", format_int},
-		{"f", fomrat_float},
+		{"f", format_float},
 		{"s", format_string},
 		{NULL, NULL}
 	};
 
-	va_strat(ap, format);
+	va_start(ap, format);
 	while (fomrat && format[i])
 	{
 		j = 0;
