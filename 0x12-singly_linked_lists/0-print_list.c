@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * _strlen - returns the length of a string
+ * _strlen - returns the length of a string.
  * @s: the string whoose length to check
  *
- * return: integer length of string
+ * Return: integer length of string
  */
 int _strlen(char *s)
 {
