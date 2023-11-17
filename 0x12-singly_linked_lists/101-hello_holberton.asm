@@ -1,9 +1,9 @@
-section			.text
+section		.text
 	extern	printf
 	global	main
 
 main:
-	mov		edit, msg
+	mov		edi, msg
 	mov		eax, 0
 	call	printf
 
